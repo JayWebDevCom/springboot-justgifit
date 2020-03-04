@@ -20,10 +20,12 @@ import java.lang.invoke.MethodHandles;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import static java.lang.String.format;
+
 @RestController
 public class UploadController {
 
-    private final static Logger log = LoggerFactory.getLogger(MethodHandles.lookup()
+    private static final Logger log = LoggerFactory.getLogger(MethodHandles.lookup()
             .lookupClass());
 
     @Value("${multipart.location}")
@@ -45,8 +47,8 @@ public class UploadController {
                          @RequestParam("end") int end,
                          @RequestParam("speed") int speed,
                          @RequestParam("repeat") boolean repeat) throws IOException, FrameGrabber.Exception {
-        File videoFile = new File(location + "/" + System
-                .currentTimeMillis() + ".mp4");
+
+        File videoFile = new File(format("%s/%d.mp4", location, System.currentTimeMillis()));
         file.transferTo(videoFile);
 
         log.info("Saved video file to {}", videoFile.getAbsolutePath());
