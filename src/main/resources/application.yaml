@@ -3,3 +3,4 @@ multipart:
   maxFileSize: 50MB
   maxRequestSize: 50MB
   location: ${java.io.tmpdir}
+debug: true
