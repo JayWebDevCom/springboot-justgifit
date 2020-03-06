@@ -6,3 +6,9 @@ Backend: Spring Boot + JavaCV + Animated-Gif-Lib
 
 ## License
 Version 2.0 of the Apache License
+
+### healthcheck
+- file storage dir writability
+```bash
+$ http -a user:pass :8080/health
+```
