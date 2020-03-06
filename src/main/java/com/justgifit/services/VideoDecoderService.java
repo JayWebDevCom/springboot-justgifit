@@ -1,4 +1,4 @@
-package schultz.dustin.io.services;
+package com.justgifit.services;
 
 import org.bytedeco.javacv.FFmpegFrameGrabber;
 import org.bytedeco.javacv.FrameGrabber;

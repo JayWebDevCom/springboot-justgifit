@@ -1,4 +1,4 @@
-package schultz.dustin.io.controller;
+package com.justgifit.controller;
 
 import com.madgag.gif.fmsware.AnimatedGifEncoder;
 import org.bytedeco.javacv.FFmpegFrameGrabber;
@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import schultz.dustin.io.services.ConverterService;
-import schultz.dustin.io.services.GifEncoderService;
-import schultz.dustin.io.services.VideoDecoderService;
+import com.justgifit.services.ConverterService;
+import com.justgifit.services.GifEncoderService;
+import com.justgifit.services.VideoDecoderService;
 
 import javax.inject.Inject;
 import java.io.File;
