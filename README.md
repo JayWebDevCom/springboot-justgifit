@@ -12,3 +12,14 @@ Version 2.0 of the Apache License
 ```bash
 $ http -a user:pass :8080/health
 ```
+
+### dockerize
+- build a docker image named ijustgifit
+```bash
+$ docker build -t ijustgifit .
+```
+
+- run the app in a docker container named cjustgifit
+```bash
+$ docker run -it --rm -p 8080:8080 --name cjustgifit ijustgifit
+```

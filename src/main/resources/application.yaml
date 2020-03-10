@@ -14,4 +14,14 @@ spring:
     favicon:
       enabled: false
 
+security:
+  user:
+    name: user
+    password: pass
+    role: ACTUATOR
+
+
+server:
+  port: ${SERVER_PORT}
+
 debug: true

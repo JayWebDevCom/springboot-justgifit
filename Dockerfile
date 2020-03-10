@@ -1,6 +1,7 @@
-# Alpine Linux with OpenJDK JRE
-FROM openjdk:8-jre-alpine
-# copy WAR into image
-COPY spring-boot-app-0.0.1-SNAPSHOT.war /app.war 
-# run application with this command line 
-CMD ["/usr/bin/java", "-jar", "-Dspring.profiles.active=default", "/app.war"]
+FROM amazoncorretto:8
+
+COPY target/just-gif-it-1.0-SNAPSHOT.jar .
+
+EXPOSE 8080
+
+CMD ["java", "-jar", "-Dspring.profiles.active=default", "just-gif-it-1.0-SNAPSHOT.jar"]
